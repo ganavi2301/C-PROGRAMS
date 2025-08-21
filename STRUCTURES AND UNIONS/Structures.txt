@@ -1,0 +1,30 @@
+//Structure program
+#include <stdio.h>
+struct student
+{
+    	int rollno;
+    	char name[20];
+    	float marks;
+};
+void main()
+{
+    	struct student s1 = {1, "Ayesha", 90};
+    	struct student s2 = {2, "Akshay", 92};
+	printf("info for s1");
+    	printf("\n %d%s%f",s1.rollno,s1.name,s1.marks);
+   	printf("\n info for s2");
+    	printf("\n %d%s%f",s2.rollno,s2.name,s2.marks);
+}
+
+//Program to print the size of the structure
+#include <stdio.h>
+struct abc
+{
+	char a;
+ 	int b;
+};
+void main()
+{
+	struct abc s;
+	printf("%d",size of(s));
+}

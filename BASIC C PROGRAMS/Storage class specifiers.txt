@@ -1,0 +1,25 @@
+//Program to use Static storage class specifier
+#include<stdio.h>
+void display();
+void main()
+{ 
+	display();
+	display();
+}
+void display()
+{
+	static int x;
+	x=x+10;
+	printf("\n x is %d",x);
+}
+o/p: 10
+     20
+
+//Program to use External storage class specifier
+#include<stdio.h>
+int a;
+int main()
+{
+	extern int a;
+	printf("%d",a);
+}

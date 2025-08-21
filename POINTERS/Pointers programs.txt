@@ -1,0 +1,94 @@
+//Void pointer
+#include <stdio.h>
+void main()
+{
+	void * vp;
+	int a = 5 ;
+	float b = 1.56 ;
+	char ch ='c';
+	vp=&a;
+	printf("a=%d\n", *(int *) vp);
+}
+
+// Null pointer 
+#include <stdio.h>
+void main()
+{
+	int * p = Null;
+	printf ("%d", *p);
+}
+
+//Null pointer
+#include <stdio.h>
+void main()
+{
+	int a=3;
+	int * ptr 1= null;
+	int * ptr 2 = null;
+	if (ptr 1== ptr 2)  
+	{
+		printf("both are null pointer");
+	}
+	else
+	{
+		printf("memory is allocated successfully");
+ 	}
+}
+
+// Dangling pointers 
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+	int * ptr = (int*) malloc ( size of (int));
+	*ptr=10;
+	print("%d\n", *ptr);
+	free (ptr);
+	printf("%d\n", *ptr);
+}
+
+//wild pointers
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+	int *ptr = null;
+	printf("%d\n", *ptr);
+}
+
+// Function pointer 
+#include <stdio.h>
+int sum (int, int);
+void main ( )
+{
+	int s = 0;
+	int (*ptr) (int,int)= & sum;
+	s= (*ptr) (2,3);
+	printf("%d", s);
+}
+int sum (int a, int b)
+{
+	return a+b;
+}
+
+//Application of function callback function
+#include <stdio.h>
+void sum (int a, int b) 
+{
+	printf("sum="%d\n", a+b);
+}
+void sub (int a, int b) 
+{
+	printf("sub="%d\n", a-b);
+}
+void display (void (*fptr) (int,int))
+{
+	fptr (5,1);
+}
+void main()
+{
+	display (sum);
+	display (sub);
+}
+
+

@@ -1,0 +1,144 @@
+//Program of if-statement
+#include<stdio.h>
+void main()
+{
+	int age;
+	printf("enter age:");
+	scanf("%d",&age);
+	if(age<20);
+	{
+		printf("Your age is %d\n",age);
+		printf("Wake up early\n");
+
+	}
+	printf("to attend the class");
+}
+
+//Program to find maximum of three numbers using nested if statement
+#include<stdio.h>
+int main()
+{
+	int a=4;b=5,c=8;
+	int max;
+	if(a>b)
+	{
+		if(a>c)
+		{
+			max=a;
+		}
+		else
+		{
+			max=c;
+		}
+	}
+	else
+	{
+		if(b>c)
+		{
+			max=b;
+		}
+		else
+		{
+			max=c;
+		}
+	}
+printf("Maximum number is :%d\n",max);
+return 0;
+}
+
+//Program to print the given input is a,A,0 using else-if ladder statement
+#include<stdio.h>
+int main()
+{
+	char ch;
+	printf("Enter a character:");
+	scanf("%c",&ch);
+	if(ch>='a' && ch<='z')
+	{
+		printf("Entered char is lowercase");
+	}
+	else if(ch>='A' && ch<='Z')
+	{
+		printf("Entered char is uppercase");
+	}
+	else if(ch>='0' && ch<='9')
+	{
+		printf("Entered char is digit");
+	}
+	else	
+	{
+		printf("Entered char is special character or symbol");
+	}
+	return 0;
+}
+
+//Program of simple calculator using switch statement
+#include<stdio.h>
+int main()
+{
+	float n1,n2,res;
+	char op;
+	printf("Enter first number:");
+	scanf("%f",&n1);
+	printf("Enter second number:");
+	scanf("%f",&n2);
+	printf("Enter an operator(+,-,*,/);");
+	scanf("%c",&op);
+	switch(op)
+	{ 
+	case '+';
+	res=n1+n2;
+	printf("res:%f\n",res);
+	break;
+	case '-';
+	res=n1-n2;
+	printf("res:%f\n",res);
+	break;
+	case '*';
+	res=n1*n2;
+	printf("res:%f\n",res);
+	break;
+	case '/';
+	res=n1/n2;
+	printf("res:%f\n",res);
+	break;
+}
+
+//Program to implement break statement
+#include<stdio.h>
+void main()
+{
+	int a,i,sum=0;
+	for(i=1;i<=5;i++)
+	{
+		printf("Enter the number");
+		scanf("%d",&a);
+		if(a<0)
+		{
+			break;
+		}
+	sum=sum+a;
+	printf("%d",sum);
+	}
+}
+
+//Program to implement continue statement
+#include<stdio.h>
+void main()
+{
+	int a,i,sum=0;
+	for(i=1;i<=5;i++)
+	{
+		printf("Enter the number");
+		scanf("%d",&a);
+		if(a<0)
+		{
+			continue;
+		}
+	sum=sum+a;
+	printf("%d",sum);
+	}
+}
+
+
+
