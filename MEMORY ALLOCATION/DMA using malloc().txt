@@ -1,0 +1,90 @@
+//Program of DMA using malloc()
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n,i,*ptr;
+	printf("Enter total no of values:");
+	scanf("%d",&n);
+	ptr=(int*)malloc(n*size of(int));
+	printf("\n enter the values:");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",(ptr+i));
+	}
+	printf("\n the entered values are:");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",*(ptr+i));
+	}
+	free(ptr);
+}
+
+//Program to use a structure to store student information and dynamically allocate the memory using malloc()
+#include <stdio.h>
+#include <stdlib.h>
+struct student{
+	int roll;
+	char name[50];
+	float marks;
+};
+int main()
+{
+	int n;
+	printf("Enter number of students:");
+	scanf("%d",&n);
+	struct student *s=(struct student*)malloc(n*size of (struct student));
+	if(s==NULL)
+	{
+		printf("Memory allocation failed\n");
+		return 1;
+	}
+	for (int i=0; i<n; i++) 
+	{
+	printf ("\n Enter details for student %d:\n", i+1);
+	printf (" Roll number: ");
+	scanf("%d", & (s+i) -> roll);
+	printf ("Name: ");
+	scanf("%s", (s+i)-> name);
+	printf("Marks: ");
+	scanf ("%f", & (s+i)->marks);
+	}
+	printf ("\n Student details: \n");
+	for (int i=0; i<n;i++)
+	{
+	printf("\n Student %d\n", i++);
+	printf("Roll: % .d\n", (s+i) ->roll);
+	printf ("Name: %s\n", (s+i) ->name); 
+	printf(" Marks: %f\n", (s+i) ->marks);
+	}
+	free (s);
+	return 0;
+}
+
+//Program to store 10 float values using malloc then freeing it
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	float *arr;
+	arr=(float*)malloc(10*size of (float));
+	if(arr==NULL)
+	{
+		printf("Memory not allocated:\n");
+		return1;
+	}
+	for(int i=0;i<10;i++)
+	{
+		printf("Enter value %d:",i+1);
+		scanf("%f", & arr[i]);
+	}
+	printf("You entered:");
+	for(int i=0;i<10;i++)
+	{
+		printf("%f",arr[i]);
+	}
+	free(arr);
+	return 0;
+}
+
+
